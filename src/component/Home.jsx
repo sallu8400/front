@@ -37,7 +37,6 @@ const Home = ({ slider, title }) => {
     const data = product.filter((item) =>
       item.title.toLowerCase().includes("salman")
     );
-    console.log(data);
   }
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {

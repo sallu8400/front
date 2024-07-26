@@ -29,6 +29,7 @@ const Layout = ({ children, update, decrementUi }) => {
       }
     });
   }, []);
+  console.log(session, "layout");
 
   const Menu = [
     {
@@ -190,9 +191,10 @@ const Layout = ({ children, update, decrementUi }) => {
 
                       <Link
                         onClick={() => signOut(auth)}
-                        className="hover:bg-gray-100 w-full text-left p-2"
+                        className=" font-medium hover:bg-gray-100 w-full text-left p-2"
                       >
-                        <i className="ri-logout-circle-r-line mr-2"></i>Logout
+                        <i className=" ri-logout-circle-r-line mr-2"></i>
+                        Logout
                       </Link>
                     </div>
                   )}
@@ -205,7 +207,7 @@ const Layout = ({ children, update, decrementUi }) => {
             </button>
 
             <aside
-              className="  md:hidden overflow-hidden h-full   bg-slate-500 fixed top-0 left-0  "
+              className="  md:hidden overflow-hidden h-full   bg-slate-300 fixed top-0 left-0  "
               style={{
                 width: sidenav ? 280 : 0,
                 transition: "0.3s",
@@ -483,7 +485,7 @@ const Layout = ({ children, update, decrementUi }) => {
             </button>
 
             <aside
-              className="  md:hidden overflow-hidden h-full   bg-slate-500 fixed top-0 left-0  "
+              className="  md:hidden overflow-hidden h-full   bg-[#3B82F6] fixed top-0 left-0  "
               style={{
                 width: sidenav ? 280 : 0,
                 transition: "0.3s",
@@ -563,7 +565,7 @@ const Layout = ({ children, update, decrementUi }) => {
                   </Link>
                 ) : (
                   <Link
-                    to="/login"
+                    to="/signup"
                     className="w-full text-center text-2xl p-3 hover:bg-rose-800 hover:text-white font-extrabold"
                   >
                     <i className="ri-login-circle-fill mr-4"></i>
